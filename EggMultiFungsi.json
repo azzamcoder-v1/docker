@@ -1,0 +1,67 @@
+{
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2025-09-25T00:00:00+07:00",
+    "name": "Egg Multi Fungsi by Tasaqif",
+    "author": "Muhammad Tasaqif Noor Az Zamil",
+    "description": "Egg serbaguna untuk Pterodactyl: Node.js LTS, NPM, PM2, Python3, PHP, C#, C++, Java, Go, Ruby, Rust, Docker, Git, dan banyak tools devops. Cocok untuk pengembangan backend, bot, aplikasi server, CI/CD, scripting, dan automasi.",
+    "features": [
+        "Node.js LTS & NPM",
+        "PM2 Process Manager",
+        "Python3 & pip",
+        "PHP & Composer",
+        "C# (dotnet)",
+        "C++ (g++)",
+        "Java (OpenJDK)",
+        "Go (Golang)",
+        "Ruby",
+        "Rust",
+        "Docker CLI",
+        "Git & GitHub CLI",
+        "Curl, Wget, Zip, Unzip",
+        "Build tools (make, gcc, cmake)",
+        "DevOps tools (yq, jq, htop, nano, vim)"
+    ],
+    "docker_images": {
+        "Egg Multi Fungsi": "docker.io/zzamcode:latest"
+    },
+    "file_denylist": [],
+    "startup": "echo 'Server started. Jalankan perintah di terminal sesuai kebutuhan.'",
+    "config": {
+        "files": {},
+        "startup": {
+            "done": "running"
+        },
+        "logs": {},
+        "stop": "^^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "# Tidak ada proses instalasi tambahan.\n# Author: Muhammad Tasaqif Noor Az Zamil\n# IG: @tasaqifaz\n# Tools sudah tersedia di image.\n",
+            "container": "docker.io/zzamcode:latest",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "AUTO_UPDATE",
+            "description": "Aktifkan auto update tools saat startup (yes/no)",
+            "env_variable": "AUTO_UPDATE",
+            "default_value": "no",
+            "user_viewable": true,
+            "user_editable": true,
+            "required": false
+        },
+        {
+            "name": "CUSTOM_STARTUP_CMD",
+            "description": "Perintah custom yang dijalankan saat startup (opsional)",
+            "env_variable": "CUSTOM_STARTUP_CMD",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "required": false
+        }
+    ]
+}
